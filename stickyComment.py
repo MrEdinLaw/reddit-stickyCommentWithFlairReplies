@@ -15,7 +15,7 @@ commentData = {}
 botCredits = "\n\n^(| [Creator](http://www.reddit.com/user/MrEdinLaw) | [GitHub](http://www.github.com/mredinlaw) |)"
 
 for comment in subreddit.stream.comments():
-    if comment.author_flair_template_id == "8e18f8a6-5bd2-11e9-a942-0e5dd855cb30":
+    if comment.author_flair_template_id == keys['css_class']:
         submission = reddit.submission(id=comment.link_id[3:])
         if submission.id not in commentData:
             reply = submission.reply("Comments made by moderators: " +
